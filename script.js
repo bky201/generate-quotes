@@ -1,5 +1,3 @@
-import * as config from "./config.js";
-
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
@@ -45,7 +43,7 @@ function newQuote() {
 // Get Quotes From API
 async function getQuotes() {
     showLoadingSpinner();
-    const apiUrl = config.APIURL;
+    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
